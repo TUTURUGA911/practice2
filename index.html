@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Practice2</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+        form {
+            background-color: white;
+            border: 3px solid #f1f1f1;
+            margin: 100px;
+            padding: 20px 20px;
+        }
+        input[type=text], input[type=number], input[type=email], input[type=date], select, textarea {
+            width: 95%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        input[type=radio] {
+            width: 10%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        .Datadiri {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .DataOrangTua {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .Data {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .Data:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width: 600px) {
+            form {
+                margin: 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;">Form Data Mahasiswa</h1>
+    </div>
+    <!-- Form -->
+    <form action="/data_mahasiswa.php">
+        <div class="Datadiri">
+            <h2>A. Form Data Diri</h2>
+            <label for="fname">Nama Lengkap</label><br>
+            <input type="text" size="30" name="nama" placeholder="Nama Lengkap">
+            <br><br>
+            
+            <label for="lnim">NIM</label><br>
+            <input type="number" size="30" name="nim" placeholder="NIM">
+            <br><br>
+           
+            <label for="lgender">Jenis Kelamin</label><br>
+            <input type="radio" name="jenis_kelamin" id="Laki-laki" value="Laki-laki">
+            <label for="Laki-laki">Laki-laki</label>
+            <input type="radio" name="jenis_kelamin" id="Perempuan" value="Perempuan">
+            <label for="Perempuan">Perempuan</label>
+            <br><br>
+
+            <label for="ltl">Tanggal Lahir</label><br>
+            <input type="date" id="tanggallahir" name="tanggallahir">
+            <br><br>
+
+            <label for="lagama">Agama</label><br>
+            <select name="agama" id="agama">
+                <option value="islam">Islam</option>
+                <option value="kristen" selected>Kristen</option>
+                <option value="hindu">Hindu</option>
+                <option value="budha">Budha</option>
+            </select>
+            <br><br>
+            
+            <label for="lalamat">Alamat</label><br>
+                
+            <textarea name="alamat" id="alamat" placeholder="Alamat"></textarea>
+            <br><br>
+
+            <label for="lprodi">Program Studi</label><br>
+            <select name="prodi" id="prodi">
+                <option value="informatika">Informatika</option>
+                <option value="telekomunikasi" selected>Telekomunikasi</option>
+                <option value="dkv">DKV</option>
+                <option value="bisnis digital">Bisnis Digital</option>
+            </select>
+            <br><br>
+
+            <label for="lhp">Nomor Handpone/Whatsapp</label><br>
+            <input type="number" size="30" name="hp" placeholder="+62">
+            <br><br>
+
+            <label for="lemail">Email</label><br>
+            <input type="email" size="30" name="email" placeholder="Email">
+        </div>
+        <div class="DataOrangTua">
+            <h2>B. Form Data Orang Tua</h2>
+            <label for="lnama_ayah">Nama Ayah</label><br>
+            <input type="text" size="30" name="nama_ayah" placeholder="Nama Ayah">
+            <br><br>
+
+            <label for="lnama_ibu">Nama Ibu</label><br>
+            <input type="text" size="30" name="nama_ibu" placeholder="Nama Ibu">
+            <br><br>
+
+            <label for="lalamat_ortu">Alamat</label><br>
+            <textarea name="alamat_ortu" id="alamat_ortu" placeholder="Alamat"></textarea>
+            <br><br>
+
+            <label for="lhp_ortu">Nomor Handpone/Whatsapp</label><br>
+            <input type="number" size="30" name="hp_ortu" placeholder="+62">
+            <br><br>
+
+            <label for="lemail_ortu">Email</label><br>
+            <input type="email" size="30" name="email_ortu" placeholder="Email">
+            <br><br>
+        </div>
+        <div class="Data">
+            <label for="myfile">Foto Copy KTP:</label><br>
+            <input type="file" id="myfile" name="myfile"><br><br>
+
+            <label for="myfile">Foto Copy Kartu Keluarga:</label><br>
+            <input type="file" id="myfile" name="myfile"><br><br>
+            
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>
